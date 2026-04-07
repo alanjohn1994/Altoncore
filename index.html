@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Altonfit — Real-Time Posture Coaching</title>
+  <meta name="description" content="Altonfit is a digital solution for gyms and fitness enthusiasts. Real-time posture coaching powered by computer vision." />
+  <meta name="keywords" content="posture coaching, computer vision, gym, fitness, AI fitness, Altonfit, Altoncore" />
+  <meta property="og:title" content="Altonfit — Real-Time Posture Coaching" />
+  <meta property="og:description" content="Real-time posture coaching powered by computer vision. Built for gyms and fitness enthusiasts." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Favicon placeholder (inline SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080808'/><text x='4' y='24' font-size='22' fill='%23cc0000' font-family='monospace' font-weight='bold'>A</text></svg>" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="#hero" class="logo" aria-label="Altonfit home">
+        <span class="logo-name">ALTON<span>FIT</span></span>
+        <span class="logo-parent">by Altoncore</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#waitlist">Contact</a></li>
+      </ul>
+
+      <button
+        id="navToggle"
+        class="nav-toggle"
+        aria-label="Toggle mobile menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <nav id="mobileMenu" class="nav-mobile" aria-label="Mobile navigation">
+    <a href="#hero">Home</a>
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#about">About Us</a>
+    <a href="#waitlist">Contact</a>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero">
+    <div class="container">
+      <p class="hero-eyebrow">Altonfit — Powered by Altoncore</p>
+
+      <h1
+        id="heroHeadline"
+        class="hero-headline"
+        data-text="Real‑time posture coaching powered by computer vision"
+        aria-label="Real‑time posture coaching powered by computer vision"
+      ></h1>
+
+      <p class="hero-sub">
+        Improve form, reduce injury risk, and get personalised feedback
+        during every rep — no wearables required.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#waitlist" class="btn btn-primary">
+          &#9654;&nbsp; Try a 7‑day demo
+        </a>
+        <a href="#waitlist" class="btn btn-outline">
+          Book a pilot for your gym or studio
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       KEY BENEFITS
+  ═══════════════════════════════════════ -->
+  <section id="benefits" aria-label="Key benefits">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefit reveal">
+          <span class="benefit-icon" aria-hidden="true">&#9652;</span>
+          <div>
+            <h3 class="benefit-title">Instant form correction</h3>
+            <p class="benefit-desc">Live visual cues and voice prompts delivered the moment a fault is detected.</p>
+          </div>
+        </div>
+        <div class="benefit reveal">
+          <span class="benefit-icon" aria-hidden="true">&#9641;</span>
+          <div>
+            <h3 class="benefit-title">Measurable progress</h3>
+            <p class="benefit-desc">Objective metrics for posture, range of motion, and symmetry across every session.</p>
+          </div>
+        </div>
+        <div class="benefit reveal">
+          <span class="benefit-icon" aria-hidden="true">&#9651;</span>
+          <div>
+            <h3 class="benefit-title">Low friction deployment</h3>
+            <p class="benefit-desc">Works with standard webcams and smartphones — no specialist hardware required.</p>
+          </div>
+        </div>
+        <div class="benefit reveal">
+          <span class="benefit-icon" aria-hidden="true">&#9632;</span>
+          <div>
+            <h3 class="benefit-title">Privacy first</h3>
+            <p class="benefit-desc">On‑device inference options and clear data ownership keep athlete data yours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FEATURES
+  ═══════════════════════════════════════ -->
+  <section id="features" aria-label="Features">
+    <div class="container">
+      <span class="tag reveal">Core Capabilities</span>
+      <h2 class="section-title reveal">What <span>Altonfit</span> Does</h2>
+      <div class="divider reveal"></div>
+      <p class="section-sub reveal">
+        A full-stack computer vision pipeline that turns any webcam or gym camera
+        into an intelligent posture coach.
+      </p>
+
+      <div class="features-grid">
+
+        <div class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">&#11835;</div>
+          <h3 class="feature-title">Real‑time feedback</h3>
+          <p class="feature-text">
+            Visual overlays highlight joint positions and alignment issues as they happen.
+            Simultaneous audio cues keep athletes focused on the movement, not the screen.
+          </p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">&#9642;</div>
+          <h3 class="feature-title">Exercise library</h3>
+          <p class="feature-text">
+            Squats, deadlifts, presses, lunges, and mobility checks — each with
+            exercise-specific form standards and fault detection thresholds built in.
+          </p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">&#9741;</div>
+          <h3 class="feature-title">Custom programmes</h3>
+          <p class="feature-text">
+            Coach or studio branding, personalised progress plans, and client
+            management tools that make Altonfit an extension of your service.
+          </p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">&#9653;</div>
+          <h3 class="feature-title">Analytics dashboard</h3>
+          <p class="feature-text">
+            Session summaries, compliance trends, and cohort comparisons give
+            coaches and gym operators the data to make informed programming decisions.
+          </p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">&#9675;</div>
+          <h3 class="feature-title">Edge deployment</h3>
+          <p class="feature-text">
+            On‑device inference keeps latency low and data local. Ideal for
+            privacy-sensitive environments and locations with limited connectivity.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════ -->
+  <section id="how-it-works" aria-label="How it works">
+    <div class="container">
+      <span class="tag reveal">Process</span>
+      <h2 class="section-title reveal">How It <span>Works</span></h2>
+      <div class="divider reveal"></div>
+      <p class="section-sub reveal">
+        From camera pixel to actionable coaching cue in under 30 milliseconds.
+      </p>
+
+      <ol class="steps" aria-label="Steps">
+
+        <li class="step reveal">
+          <span class="step-num"></span>
+          <h3 class="step-title">Capture</h3>
+          <p class="step-desc">
+            A camera or phone records the exercise using any standard webcam,
+            IP camera, or mobile device — no depth sensors or wearables needed.
+          </p>
+        </li>
+
+        <li class="step reveal">
+          <span class="step-num"></span>
+          <h3 class="step-title">Analyse</h3>
+          <p class="step-desc">
+            Our CV models estimate pose and detect deviations from safe form,
+            measuring joint angles, symmetry, and movement velocity in real time.
+          </p>
+        </li>
+
+        <li class="step reveal">
+          <span class="step-num"></span>
+          <h3 class="step-title">Coach</h3>
+          <p class="step-desc">
+            Real‑time cues guide the athlete through each rep, followed by a
+            post‑session report with corrective drills tailored to detected faults.
+          </p>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       USE CASES
+  ═══════════════════════════════════════ -->
+  <section id="use-cases" aria-label="Use cases">
+    <div class="container">
+      <span class="tag reveal">Who It's For</span>
+      <h2 class="section-title reveal"><span>Use</span> Cases</h2>
+      <div class="divider reveal"></div>
+      <p class="section-sub reveal">
+        Whether you run a gym chain or train solo, Altonfit scales to your needs.
+      </p>
+
+      <div class="use-cases-grid">
+
+        <div class="use-case-card reveal">
+          <div class="use-case-icon" aria-hidden="true">&#127947;</div>
+          <h3 class="use-case-title">Commercial Gyms</h3>
+          <p class="use-case-desc">
+            Deploy on existing camera infrastructure to offer every member
+            AI coaching without hiring additional staff.
+          </p>
+        </div>
+
+        <div class="use-case-card reveal">
+          <div class="use-case-icon" aria-hidden="true">&#128170;</div>
+          <h3 class="use-case-title">Personal Trainers</h3>
+          <p class="use-case-desc">
+            Augment your sessions with objective data. Review form clips,
+            share posture reports, and justify your program adjustments.
+          </p>
+        </div>
+
+        <div class="use-case-card reveal">
+          <div class="use-case-icon" aria-hidden="true">&#127968;</div>
+          <h3 class="use-case-title">Home Athletes</h3>
+          <p class="use-case-desc">
+            A laptop webcam is all you need. Get coach-level feedback on
+            squats, deadlifts, and mobility drills from your living room.
+          </p>
+        </div>
+
+        <div class="use-case-card reveal">
+          <div class="use-case-icon" aria-hidden="true">&#9877;</div>
+          <h3 class="use-case-title">Rehab &amp; Physiotherapy</h3>
+          <p class="use-case-desc">
+            Track patient movement patterns during recovery exercises and flag
+            compensatory movements before they cause secondary injury.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════ -->
+  <section id="about" aria-label="About Altoncore">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Visual panel -->
+        <div class="about-visual reveal" aria-hidden="true">
+          <span class="about-corner tl"></span>
+          <span class="about-corner tr"></span>
+          <span class="about-corner bl"></span>
+          <span class="about-corner br"></span>
+          <pre class="about-visual-inner">
+  O
+ /|\     ALTONFIT
+ / \     POSE ENGINE v1.0
+
+ KEYPOINTS DETECTED: 17
+ FRAME LATENCY: &lt;30ms
+ CONFIDENCE:  96.4%
+
+ LEFT SHOULDER  [✓]
+ RIGHT SHOULDER [✓]
+ LEFT HIP       [✓]
+ RIGHT HIP      [✓]
+ LEFT KNEE      [✓]
+ RIGHT KNEE     [✓]
+ SPINE ANGLE    [⚠ 14°]
+
+ &gt; ALERT: FORWARD LEAN
+ &gt; COACHING: BRACE CORE
+          </pre>
+        </div>
+
+        <!-- Text content -->
+        <div class="about-content">
+          <span class="tag reveal">About</span>
+          <h2 class="section-title reveal">Built by <span>Altoncore</span></h2>
+          <div class="divider reveal"></div>
+
+          <p class="reveal">
+            Altoncore is a technology company building intelligent digital infrastructure
+            for health, performance, and human movement. Our mission is to make
+            expert-level coaching accessible to everyone — regardless of budget or location.
+          </p>
+
+          <p class="reveal">
+            Altonfit is our flagship product: a computer vision platform that turns
+            commodity cameras into real-time biomechanical coaches. We combine
+            cutting-edge pose estimation research with a pragmatic product focus,
+            shipping tools that work in the real world — noisy gyms, imperfect lighting,
+            and all.
+          </p>
+
+          <div class="about-badges reveal">
+            <span class="badge">Computer Vision</span>
+            <span class="badge">Deep Learning</span>
+            <span class="badge">Biomechanics</span>
+            <span class="badge">WebRTC</span>
+            <span class="badge">Edge Inference</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       WAITLIST / CTA
+  ═══════════════════════════════════════ -->
+  <section id="waitlist" aria-label="Join the waitlist">
+    <div class="container">
+      <span class="tag reveal">Early Access</span>
+      <h2 class="section-title reveal">Start Your <span>7‑Day Demo</span></h2>
+      <div class="divider" style="margin: 1rem auto 1.5rem;"></div>
+      <p class="section-sub reveal" style="margin: 0 auto 2rem; text-align:center;">
+        Try Altonfit free for 7 days, or book a pilot for your gym or studio.
+        No credit card required.
+      </p>
+
+      <div class="waitlist-cta-btns reveal">
+        <form id="waitlistForm" class="waitlist-form" novalidate>
+          <label class="sr-only" for="emailInput">Email address</label>
+          <input
+            id="emailInput"
+            class="waitlist-input"
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="btn btn-primary">
+            &#9654;&nbsp; Try a 7‑day demo
+          </button>
+        </form>
+        <a href="mailto:hello@altoncore.io?subject=Gym+Pilot+Enquiry" class="btn btn-outline">
+          Book a pilot for your gym or studio
+        </a>
+      </div>
+
+      <p id="successMsg" class="success-msg" role="alert" aria-live="polite">
+        ✓ You're on the list. We'll be in touch soon.
+      </p>
+
+      <p class="waitlist-note reveal">No spam. No commitments. Cancel any time.</p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-copy">
+          &copy; 2026 Altoncore. All rights reserved. &mdash; Altonfit&trade;
+        </span>
+
+        <ul class="footer-links" role="list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#waitlist">Contact</a></li>
+        </ul>
+
+        <span class="footer-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Systems operational
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
