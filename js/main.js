@@ -95,8 +95,9 @@
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const email = form.querySelector('input[type="email"]').value.trim();
-      if (!email) return;
+      const emailInput = form.querySelector('input[type="email"]');
+      const email = emailInput.value.trim();
+      if (!email || !emailInput.checkValidity()) return;
       // In production, POST to your backend here
       console.log('Demo signup:', email);
       const ctaBlock = document.querySelector('.waitlist-cta-btns');
